@@ -1,11 +1,12 @@
 import React from 'react';
 
+// Without this line the test is successful
 import { setCount } from '../../redux/test-reducer';
 
 import styles from './Home.module.scss';
 
 const Home = () => {
-  console.log(setCount);
+  console.log();
 
   return (
     <div className={styles.container}>
