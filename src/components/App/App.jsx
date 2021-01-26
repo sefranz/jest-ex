@@ -1,6 +1,7 @@
 import React from 'react';
 import NextApp from 'next/app';
-
+import { Provider } from 'react-redux';
+import store from '../../redux/store';
 
 class App extends NextApp {
   componentDidMount() {
@@ -13,9 +14,10 @@ class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props;
 
-
     return (
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     );
   }
 }
